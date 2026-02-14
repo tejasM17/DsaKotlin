@@ -1,4 +1,4 @@
-package org.example.feb
+package feb
 
 class Solution {
     fun isPalindrome(x: Int): Boolean {
@@ -12,5 +12,5 @@ class Solution {
 
 fun main() {
     val sol = Solution()
-    println(sol.isPalindrome(123))
+    sol.isPalindrome(123)
 }
