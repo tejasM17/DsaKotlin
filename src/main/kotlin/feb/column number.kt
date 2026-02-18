@@ -12,8 +12,6 @@ package feb
                 num /= 26
             }
             return res
-
-
         }
 
 
