@@ -6,8 +6,6 @@ class twoSum {
 
         for (i in nums.indices){
             val c = target - nums[i]
-            println(i)
-
             if (map.containsKey(c)){
                 return intArrayOf(map[c]!!,i)
             }
