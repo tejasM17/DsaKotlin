@@ -1,6 +1,5 @@
 package org.example.sept
 
-import kotlin.math.max
 
 class BuyAndSellStock {
     fun maxProfit(prices: IntArray): Int {
