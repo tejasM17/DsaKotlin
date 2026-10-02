@@ -1,17 +1,33 @@
 package org.example.sept
 
-import feb.isPalindrome
-
 class ValPalindrome {
-    fun isPalindrome(s: String): Unit {
+    fun isPalindrome(s: String): Boolean {
+        val str = s.lowercase()
         var L = 0
-        var R = s.length - 1
+        var R = str.length - 1
 
-        println(s[R])
+        while (L < R){
+            while (L < R && !str[L].isLetterOrDigit() ){
+                L++
+            }
+
+            while (L < R && !str[R].isLetterOrDigit()){
+                R--
+            }
+
+            if (str[L] == str[R]) {
+                L++
+                R--
+            } else return false
+        }
+        return true
     }
 }
 
 fun main() {
     val str = "Was it a car or a cat I saw?"
-    val pal = isPalindrome(str)
+    val obj = ValPalindrome()
+
+    val isvalid = obj.isPalindrome(str)
+    println(isvalid)
 }
