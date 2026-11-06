@@ -8,7 +8,16 @@ class TreeNode(var `val`: Int) {
     var right: TreeNode? = null
 }
 
-fun invertTree(root: TreeNode?): {
+fun invertTree(root: TreeNode?): TreeNode? {
     if (root == null) return null
 
+    val temp = root.left
+
+    root.left = root.right
+    root.right = temp
+
+    invertTree(root.right)
+    invertTree(root.left)
+
+    return root
 }
